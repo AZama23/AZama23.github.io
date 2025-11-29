@@ -17,15 +17,38 @@ document.querySelectorAll('.album-card').forEach(card => {
     });
 });
 
-// Efecto hover en las portadas de álbum
+// Efecto hover mejorado en las portadas de álbum
 document.querySelectorAll('.album-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         const image = this.querySelector('.album-image');
-        image.style.transform = 'scale(1.05)';
+        if (image) {
+            image.style.transform = 'scale(1.02)';
+        }
     });
     
     card.addEventListener('mouseleave', function() {
         const image = this.querySelector('.album-image');
-        image.style.transform = 'scale(1)';
+        if (image) {
+            image.style.transform = 'scale(1)';
+        }
+    });
+});
+
+// Smooth scroll para navegación
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#home') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+        const target = document.querySelector(targetId);
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
