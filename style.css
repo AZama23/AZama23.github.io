@@ -35,6 +35,18 @@ body {
     line-height: 1.6;
 }
 
+/* Justificar textos que no sean títulos */
+p, .about-content p, .section-intro, .formacion-intro, 
+.hero-subtitle, .album-description, .single-artist,
+.about-travel, .contact-list li, .single-popup p {
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6, .album-title, .single-title,
+.hero h1, .page-title, .section-title {
+    text-align: left;
+}
+
 a {
     color: var(--spotify-green);
     text-decoration: none;
@@ -493,6 +505,14 @@ a:hover {
     margin-top: 1.5rem;
 }
 
+.skill-column {
+    background: var(--spotify-green);
+    color: var(--spotify-darker);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
 .skill-column ul {
     padding-left: 1.1rem;
     list-style: none;
@@ -500,13 +520,15 @@ a:hover {
 
 .skill-column ul li {
     margin-bottom: 0.5rem;
-    color: var(--text-secondary);
+    color: var(--spotify-darker);
+    font-weight: 500;
 }
 
 .skill-column h3 {
     font-size: 1.1rem;
     margin-bottom: 0.8rem;
-    color: var(--text-primary);
+    color: var(--spotify-darker);
+    font-weight: 700;
 }
 
 /* ------------------------------------------------------ */
