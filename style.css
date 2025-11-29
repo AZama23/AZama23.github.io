@@ -362,116 +362,113 @@ a:hover {
 }
 
 /* ------------------------------------------------------ */
-/* PROYECTOS */
+/* PROYECTOS - SINGLES */
 /* ------------------------------------------------------ */
 
-.polaroid-grid {
+.singles-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
     margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.polaroid {
-    background: var(--spotify-light-gray);
-    width: 100%;
-    max-width: 240px;
-    padding: 12px;
-    padding-bottom: 32px;
-    border-radius: 10px;
-    box-shadow: var(--shadow-soft);
+.single-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
     position: relative;
-    text-align: center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.polaroid-img {
+.single-item:hover {
+    background: var(--spotify-light-gray);
+    transform: translateX(4px);
+}
+
+.single-image-container {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+}
+
+.single-image {
     width: 100%;
-    height: 160px;
-    background: var(--spotify-gray);
+    height: 100%;
     border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    display: block;
+}
+
+.single-placeholder {
+    background: var(--spotify-gray);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12px;
 }
 
-.polaroid-emoji {
-    font-size: 2.5rem;
+.single-icon {
+    font-size: 2rem;
 }
 
-.polaroid h3 {
-    margin: 0.7rem 0 0.3rem;
-    font-size: 1.05rem;
+.single-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.single-title {
+    font-size: 1rem;
     color: var(--text-primary);
-    font-weight: 600;
-}
-
-.polaroid-link {
-    display: inline-block;
-    margin-top: 0.4rem;
-    font-size: 0.85rem;
     font-weight: 500;
-    color: var(--spotify-green);
-    background: rgba(29, 185, 84, 0.1);
-    padding: 0.25rem 0.7rem;
-    border-radius: 999px;
-    border: 1px solid rgba(29, 185, 84, 0.3);
+    margin: 0 0 0.25rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.polaroid-link:hover {
-    background: rgba(29, 185, 84, 0.2);
-    color: var(--spotify-green-hover);
-    text-decoration: none;
+.single-artist {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
 }
 
-.sticker {
+.single-popup {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 1.6rem;
-    transform: rotate(10deg);
-}
-
-.tilt-left {
-    transform: rotate(-2deg);
-}
-
-.tilt-right {
-    transform: rotate(2deg);
-}
-
-.polaroid:hover {
-    transform: translateY(-6px) rotate(2deg);
-    box-shadow: var(--shadow-strong);
-}
-
-.polaroid-popup {
-    position: absolute;
-    inset: 10px;
+    left: 80px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
     background: var(--spotify-dark);
     color: var(--text-primary);
     border-radius: 12px;
-    padding: 0.75rem 0.9rem;
-    font-size: 0.85rem;
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(6px);
     transition: opacity 0.2s ease, transform 0.2s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    max-width: 400px;
 }
 
-.polaroid:hover .polaroid-popup {
+.single-item:hover .single-popup {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-50%) translateX(0);
 }
 
 .popup-meta {
-    margin-top: 0.4rem;
+    margin-top: 0.5rem;
     color: var(--text-secondary);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 }
 
 /* ------------------------------------------------------ */
