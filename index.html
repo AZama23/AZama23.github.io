@@ -17,24 +17,55 @@
                 <a href="#home">Inicio</a>
                 <a href="#about">Sobre Mí</a>
                 <a href="#projects">Proyectos</a>
+                <a href="#education">Educación</a>
+                <a href="#experience">Experiencia</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#contact">Contacto</a>
             </nav>
         </div>
     </header>
 
     <main class="main-content">
         <div class="container">
+            <!-- HERO -->
             <section class="hero section" id="home">
-                <h1 class="page-title">Alonso Zamanillo</h1>
-                <p class="hero-subtitle">Desarrollador • Creador • Innovador</p>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-kicker">Bienvenido a mi espacio digital</p>
+                        <h1 class="page-title">Hola, soy Alonso Zamanillo 👋</h1>
+                        <p class="hero-subtitle">
+                            Desarrollador apasionado por crear soluciones innovadoras y experiencias digitales excepcionales. 
+                            Me encanta aprender nuevas tecnologías y enfrentar desafíos creativos.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">Ver mis proyectos</a>
+                            <a href="#contact" class="btn btn-secondary">Contactarme</a>
+                        </div>
+                    </div>
+                    <div class="hero-side">
+                        <div class="hero-polaroid">
+                            <div class="hero-polaroid-img">
+                                <div class="hero-polaroid-photo gradient-1">
+                                    <span style="font-size: 4rem;">AZ</span>
+                                </div>
+                            </div>
+                            <p class="hero-caption">Polaroids de código y proyectos</p>
+                        </div>
+                        <div class="floating-sticker sticker-1">✨</div>
+                        <div class="floating-sticker sticker-2">💻</div>
+                        <div class="floating-sticker sticker-3">🚀</div>
+                    </div>
+                </div>
             </section>
 
+            <!-- DISCOGRAFÍA - Portadas de álbum -->
             <section class="section">
                 <h2 class="section-title">Mi Discografía</h2>
-                <p class="section-intro">Explora mis diferentes colecciones y proyectos</p>
+                <p class="section-intro">Explora mis diferentes colecciones y proyectos. Haz clic en cualquier portada para conocer más.</p>
                 
                 <div class="albums-grid">
                     <!-- This is Alonso Zamanillo -->
-                    <div class="album-card polaroid tilt-left" data-section="about">
+                    <a href="#about" class="album-card polaroid tilt-left">
                         <div class="album-cover">
                             <div class="album-image gradient-1">
                                 <span class="album-icon">AZ</span>
@@ -47,10 +78,10 @@
                             <strong>This is Alonso Zamanillo</strong>
                             <div class="popup-meta">Conoce más sobre mí</div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Mayores Hits (Proyectos) -->
-                    <div class="album-card polaroid tilt-right" data-section="projects">
+                    <a href="#projects" class="album-card polaroid tilt-right">
                         <div class="album-cover">
                             <div class="album-image gradient-2">
                                 <span class="album-icon">★</span>
@@ -63,10 +94,10 @@
                             <strong>Mayores Hits</strong>
                             <div class="popup-meta">Mis mejores proyectos</div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Primera Discografía (Educación) -->
-                    <div class="album-card polaroid tilt-left" data-section="education">
+                    <a href="#education" class="album-card polaroid tilt-left">
                         <div class="album-cover">
                             <div class="album-image gradient-3">
                                 <span class="album-icon">📚</span>
@@ -79,10 +110,10 @@
                             <strong>Primera Discografía</strong>
                             <div class="popup-meta">Mi formación académica</div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Colaboraciones (Experiencia) -->
-                    <div class="album-card polaroid tilt-right" data-section="experience">
+                    <a href="#experience" class="album-card polaroid tilt-right">
                         <div class="album-cover">
                             <div class="album-image gradient-4">
                                 <span class="album-icon">🤝</span>
@@ -95,39 +126,245 @@
                             <strong>Colaboraciones</strong>
                             <div class="popup-meta">Mi experiencia laboral</div>
                         </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SOBRE MÍ -->
+            <section id="about" class="section section-alt">
+                <div class="container">
+                    <h2>This is Alonso Zamanillo</h2>
+                    <div class="about-content">
+                        <p>
+                            Soy un desarrollador apasionado por crear soluciones innovadoras y experiencias digitales excepcionales. 
+                            Me interesa combinar herramientas tecnológicas con problemas reales, trabajando en proyectos que tengan 
+                            un impacto positivo en las personas.
+                        </p>
+                        <p>
+                            Me gusta documentar bien mis procesos, trabajar en equipo y aprender tecnologías nuevas que me permitan 
+                            crear mejores soluciones. Disfruto mucho del proceso de aprendizaje continuo y de compartir conocimiento 
+                            con otros desarrolladores.
+                        </p>
+                        <p class="about-travel">
+                            He tenido la oportunidad de trabajar en diferentes proyectos y contextos, lo que me ha enseñado a adaptarme, 
+                            observar con curiosidad y disfrutar enfrentando nuevos desafíos tecnológicos.
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Secciones de contenido (ocultas inicialmente) -->
-            <div id="about" class="section-content hidden section section-alt">
-                <h2>This is Alonso Zamanillo</h2>
-                <div class="about-content">
-                    <p>Aquí va tu información personal, quién eres, tus intereses, etc.</p>
-                    <p>Puedes agregar más detalles sobre ti, tu pasión por la tecnología, tus hobbies, y lo que te motiva.</p>
+            <!-- PROYECTOS -->
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2>Mayores Hits - Proyectos</h2>
+                    <p class="section-intro">
+                        Pequeñas polaroids de algunos proyectos en los que he trabajado. 
+                        Pasa el cursor encima para ver más detalles.
+                    </p>
+
+                    <div class="polaroid-grid">
+                        <!-- Proyecto 1 -->
+                        <article class="polaroid tilt-left">
+                            <div class="polaroid-img">
+                                <span class="polaroid-emoji">🌐</span>
+                            </div>
+                            <h3>Proyecto Web App</h3>
+                            <a href="#" class="polaroid-link">Ver proyecto</a>
+                            <div class="polaroid-popup">
+                                <p>
+                                    Aplicación web full-stack desarrollada con tecnologías modernas para gestionar 
+                                    tareas y colaboración en equipo.
+                                </p>
+                                <p class="popup-meta">React · Node.js · MongoDB</p>
+                            </div>
+                            <span class="sticker">✨</span>
+                        </article>
+
+                        <!-- Proyecto 2 -->
+                        <article class="polaroid tilt-right">
+                            <div class="polaroid-img">
+                                <span class="polaroid-emoji">📱</span>
+                            </div>
+                            <h3>App Móvil</h3>
+                            <a href="#" class="polaroid-link">Ver proyecto</a>
+                            <div class="polaroid-popup">
+                                <p>
+                                    Aplicación móvil desarrollada para iOS y Android con funcionalidades 
+                                    de geolocalización y notificaciones en tiempo real.
+                                </p>
+                                <p class="popup-meta">React Native · Firebase</p>
+                            </div>
+                            <span class="sticker">🔥</span>
+                        </article>
+
+                        <!-- Proyecto 3 -->
+                        <article class="polaroid tilt-left">
+                            <div class="polaroid-img">
+                                <span class="polaroid-emoji">🤖</span>
+                            </div>
+                            <h3>Proyecto IA</h3>
+                            <a href="#" class="polaroid-link">Ver proyecto</a>
+                            <div class="polaroid-popup">
+                                <p>
+                                    Sistema de recomendación usando machine learning para personalizar 
+                                    experiencias de usuario.
+                                </p>
+                                <p class="popup-meta">Python · TensorFlow · Scikit-learn</p>
+                            </div>
+                            <span class="sticker">💖</span>
+                        </article>
+
+                        <!-- Proyecto 4 -->
+                        <article class="polaroid tilt-right">
+                            <div class="polaroid-img">
+                                <span class="polaroid-emoji">📊</span>
+                            </div>
+                            <h3>Dashboard Analytics</h3>
+                            <a href="#" class="polaroid-link">Ver proyecto</a>
+                            <div class="polaroid-popup">
+                                <p>
+                                    Dashboard interactivo para visualizar métricas y KPIs en tiempo real 
+                                    con actualizaciones automáticas.
+                                </p>
+                                <p class="popup-meta">D3.js · Python · PostgreSQL</p>
+                            </div>
+                            <span class="sticker">📈</span>
+                        </article>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="projects" class="section-content hidden section">
-                <h2>Mayores Hits - Proyectos</h2>
-                <p class="section-intro">Aquí van tus proyectos destacados. Los mejores trabajos que has realizado.</p>
-            </div>
+            <!-- EDUCACIÓN -->
+            <section id="education" class="section section-alt">
+                <div class="container">
+                    <h2>Primera Discografía - Educación</h2>
+                    <p class="formacion-intro">
+                        Mi formación académica y cursos que he completado. Me interesan especialmente 
+                        los cursos que combinan teoría con práctica y aplicaciones reales.
+                    </p>
 
-            <div id="education" class="section-content hidden section section-alt">
-                <h2>Primera Discografía - Educación</h2>
-                <p class="section-intro">Aquí va tu formación académica, cursos, certificaciones y estudios.</p>
-            </div>
+                    <div class="education-content">
+                        <div class="education-item">
+                            <h3>🎓 Licenciatura en Ciencias de la Computación</h3>
+                            <p class="education-meta">Universidad • 2018 - 2022</p>
+                            <p>Enfoque en desarrollo de software, algoritmos y estructuras de datos.</p>
+                        </div>
 
-            <div id="experience" class="section-content hidden section">
-                <h2>Colaboraciones - Experiencia</h2>
-                <p class="section-intro">Aquí va tu experiencia laboral, trabajos, colaboraciones y logros profesionales.</p>
-            </div>
+                        <div class="education-item">
+                            <h3>📜 Certificaciones</h3>
+                            <div class="courses-row">
+                                <div class="course-bubble">Full Stack Development</div>
+                                <div class="course-bubble">Cloud Computing</div>
+                                <div class="course-bubble">Machine Learning</div>
+                                <div class="course-bubble">DevOps</div>
+                                <div class="course-bubble">UI/UX Design</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCIA -->
+            <section id="experience" class="section">
+                <div class="container">
+                    <h2>Colaboraciones - Experiencia</h2>
+                    <p class="section-intro">
+                        Mi experiencia laboral y colaboraciones en diferentes proyectos y empresas.
+                    </p>
+
+                    <div class="experience-list">
+                        <div class="experience-item">
+                            <h3>💼 Desarrollador Full Stack</h3>
+                            <p class="experience-meta">Empresa Tech • 2022 - Presente</p>
+                            <p>
+                                Desarrollo de aplicaciones web y móviles utilizando tecnologías modernas. 
+                                Liderazgo de proyectos y colaboración con equipos multidisciplinarios.
+                            </p>
+                        </div>
+
+                        <div class="experience-item">
+                            <h3>💼 Desarrollador Frontend</h3>
+                            <p class="experience-meta">Startup • 2020 - 2022</p>
+                            <p>
+                                Creación de interfaces de usuario atractivas y funcionales. 
+                                Implementación de diseños responsive y optimización de rendimiento.
+                            </p>
+                        </div>
+
+                        <div class="experience-item">
+                            <h3>💼 Desarrollador Junior</h3>
+                            <p class="experience-meta">Agencia Digital • 2019 - 2020</p>
+                            <p>
+                                Desarrollo de sitios web y aplicaciones para clientes. 
+                                Aprendizaje continuo y colaboración en proyectos diversos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HABILIDADES -->
+            <section id="skills" class="section section-alt">
+                <div class="container">
+                    <h2>Habilidades <span class="gear">⚙️</span></h2>
+
+                    <div class="skills-grid">
+                        <div class="skill-column">
+                            <h3>Lenguajes</h3>
+                            <ul>
+                                <li>JavaScript / TypeScript</li>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>HTML / CSS</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-column">
+                            <h3>Frameworks & Librerías</h3>
+                            <ul>
+                                <li>React / Vue</li>
+                                <li>Node.js / Express</li>
+                                <li>Django / Flask</li>
+                                <li>Next.js</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-column">
+                            <h3>Herramientas</h3>
+                            <ul>
+                                <li>Git & GitHub</li>
+                                <li>Docker</li>
+                                <li>AWS / Cloud</li>
+                                <li>CI/CD</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACTO -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2>Contacto</h2>
+                    <p>
+                        Si te interesa colaborar en un proyecto, platicar sobre ideas o tienes alguna duda, 
+                        puedes contactarme aquí:
+                    </p>
+
+                    <ul class="contact-list">
+                        <li>Email: <a href="mailto:alonso@ejemplo.com">alonso@ejemplo.com</a></li>
+                        <li>LinkedIn: <a href="#" target="_blank">Mi perfil de LinkedIn</a></li>
+                        <li>GitHub: <a href="https://github.com/AZama23" target="_blank">AZama23</a></li>
+                        <li>Twitter: <a href="#" target="_blank">@alonsozamanillo</a></li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 Alonso Zamanillo. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Alonso Zamanillo. Construido con HTML, CSS y GitHub Pages.</p>
         </div>
     </footer>
 

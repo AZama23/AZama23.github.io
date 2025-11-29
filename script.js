@@ -1,18 +1,43 @@
-// Mostrar/ocultar secciones al hacer clic en los álbumes
+// Smooth scroll para navegación - las portadas de álbum llevan a las secciones
 document.querySelectorAll('.album-card').forEach(card => {
-    card.addEventListener('click', function() {
-        const sectionId = this.getAttribute('data-section');
-        const section = document.getElementById(sectionId);
-        
-        // Ocultar todas las secciones
-        document.querySelectorAll('.section-content').forEach(sec => {
-            sec.classList.add('hidden');
-        });
-        
-        // Mostrar la sección seleccionada
-        if (section) {
-            section.classList.remove('hidden');
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    card.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            const target = document.querySelector(href);
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
+
+// Smooth scroll para todos los enlaces de navegación
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#home' || targetId === '#') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+        const target = document.querySelector(targetId);
+        if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         }
     });
 });
@@ -34,21 +59,19 @@ document.querySelectorAll('.album-card').forEach(card => {
     });
 });
 
-// Smooth scroll para navegación
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#home') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            return;
+// Efecto hover en polaroids de proyectos
+document.querySelectorAll('.polaroid').forEach(polaroid => {
+    polaroid.addEventListener('mouseenter', function() {
+        const image = this.querySelector('.polaroid-img');
+        if (image) {
+            image.style.transform = 'scale(1.05)';
         }
-        const target = document.querySelector(targetId);
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+    });
+    
+    polaroid.addEventListener('mouseleave', function() {
+        const image = this.querySelector('.polaroid-img');
+        if (image) {
+            image.style.transform = 'scale(1)';
         }
     });
 });
