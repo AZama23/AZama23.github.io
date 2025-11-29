@@ -36,10 +36,14 @@ body {
 }
 
 /* Justificar textos que no sean títulos */
-p, .about-content p, .section-intro, .formacion-intro, 
-.hero-subtitle, .album-description, .single-artist,
+.about-content p, .section-intro, .formacion-intro, 
+.album-description, .single-artist,
 .about-travel, .contact-list li, .single-popup p {
     text-align: justify;
+}
+
+.hero-kicker, .hero-subtitle {
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6, .album-title, .single-title,
