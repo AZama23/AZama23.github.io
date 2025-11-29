@@ -385,11 +385,14 @@ a:hover {
     transition: all 0.2s ease;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
+    color: inherit;
 }
 
 .single-item:hover {
     background: var(--spotify-light-gray);
     transform: translateX(4px);
+    text-decoration: none;
 }
 
 .single-image-container {
