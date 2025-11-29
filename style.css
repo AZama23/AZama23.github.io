@@ -204,8 +204,11 @@ a:hover {
     object-fit: cover;
 }
 
-.album-image-container .album-image {
-    display: block;
+.album-image-container img.album-image {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
 }
 
 .album-image-container .gradient-4 {
