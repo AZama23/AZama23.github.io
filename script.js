@@ -1,49 +1,31 @@
-// Smooth scroll para navegación
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+// Mostrar/ocultar secciones al hacer clic en los álbumes
+document.querySelectorAll('.album-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const sectionId = this.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+        
+        // Ocultar todas las secciones
+        document.querySelectorAll('.section-content').forEach(sec => {
+            sec.classList.add('hidden');
+        });
+        
+        // Mostrar la sección seleccionada
+        if (section) {
+            section.classList.remove('hidden');
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
 
-// Actualizar nav activo al hacer scroll
-const sections = document.querySelectorAll('section[id]');
-const navItems = document.querySelectorAll('.nav-item');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navItems.forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('href') === `#${current}`) {
-            item.classList.add('active');
-        }
-    });
-});
-
-// Efecto hover en las tarjetas de playlist
-document.querySelectorAll('.playlist-card').forEach(card => {
+// Efecto hover en las portadas de álbum
+document.querySelectorAll('.album-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
-        this.style.transition = 'all 0.3s ease';
+        const image = this.querySelector('.album-image');
+        image.style.transform = 'scale(1.05)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        const image = this.querySelector('.album-image');
+        image.style.transform = 'scale(1)';
     });
 });
-
-// Botón de reproducción (puedes agregar funcionalidad aquí)
-document.querySelector('.play-button')?.addEventListener('click', function() {
-    // Aquí puedes agregar funcionalidad, como reproducir un video o audio
-    console.log('Reproducir perfil');
-});
-
