@@ -157,6 +157,7 @@ a:hover {
     font-size: 0.8rem;
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .hero h1 {
@@ -164,6 +165,7 @@ a:hover {
     margin: 0 0 1rem;
     color: var(--text-primary);
     font-weight: 900;
+    text-align: center;
 }
 
 .hero-subtitle {
