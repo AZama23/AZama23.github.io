@@ -194,7 +194,7 @@ a:hover {
     gap: 1rem;
     padding: 0.75rem;
     border-radius: 8px;
-    background: var(--spotify-light-gray);
+    background: var(--spotify-green);
     transition: all 0.2s ease;
     cursor: pointer;
     text-decoration: none;
