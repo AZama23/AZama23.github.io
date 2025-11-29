@@ -198,11 +198,11 @@ a:hover {
     transition: all 0.2s ease;
     cursor: pointer;
     text-decoration: none;
-    color: inherit;
+    color: var(--spotify-darker);
 }
 
 .album-row:hover {
-    background: var(--spotify-gray);
+    background: var(--spotify-green-hover);
     transform: translateX(4px);
     text-decoration: none;
 }
@@ -268,7 +268,7 @@ a:hover {
 
 .album-title {
     font-size: 1.1rem;
-    color: var(--text-primary);
+    color: var(--spotify-darker);
     font-weight: 600;
     margin: 0 0 0.25rem 0;
     text-decoration: none;
@@ -276,7 +276,8 @@ a:hover {
 
 .album-description {
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--spotify-darker);
+    opacity: 0.8;
     margin: 0;
     line-height: 1.4;
 }
