@@ -133,8 +133,8 @@ a:hover {
 }
 
 .spotify-logo svg {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     color: var(--spotify-green);
     fill: var(--spotify-green);
 }
