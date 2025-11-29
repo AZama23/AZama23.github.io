@@ -148,53 +148,58 @@ a:hover {
     font-size: 1rem;
 }
 
-/* Albums Grid en Hero */
-.hero .albums-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    justify-content: center;
-    max-width: 1000px;
+/* Albums List en Hero - Estilo Spotify */
+.albums-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.album-card {
+.album-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
     background: var(--spotify-light-gray);
-    width: 100%;
-    max-width: 240px;
-    margin: 0 auto;
-    padding: 12px;
-    padding-bottom: 32px;
-    border-radius: 10px;
-    box-shadow: var(--shadow-soft);
-    position: relative;
-    text-align: center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
-    display: block;
+    text-decoration: none;
     color: inherit;
 }
 
-.album-cover {
-    position: relative;
-    margin-bottom: 12px;
+.album-row:hover {
+    background: var(--spotify-gray);
+    transform: translateX(4px);
+    text-decoration: none;
+}
+
+.album-image-container {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
 }
 
 .album-image {
     width: 100%;
-    aspect-ratio: 1;
+    height: 100%;
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    transition: transform 0.2s ease;
+}
+
+.album-row:hover .album-image {
+    transform: scale(1.05);
 }
 
 .album-icon {
-    font-size: 3.5rem;
-    z-index: 1;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Gradientes para cada álbum */
@@ -214,94 +219,24 @@ a:hover {
     background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
-.album-card:hover {
-    transform: translateY(-6px) rotate(2deg);
-    box-shadow: var(--shadow-strong);
-    text-decoration: none;
-}
-
-.album-card:hover .album-image {
-    transform: scale(1.05);
+.album-info {
+    flex: 1;
+    min-width: 0;
 }
 
 .album-title {
-    margin: 0.7rem 0 0.3rem;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--text-primary);
     font-weight: 600;
+    margin: 0 0 0.25rem 0;
     text-decoration: none;
 }
 
-.album-subtitle {
+.album-description {
     font-size: 0.9rem;
     color: var(--text-secondary);
-}
-
-/* Stickers en álbumes */
-.album-card .sticker {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 1.6rem;
-    transform: rotate(10deg);
-    z-index: 2;
-    animation: float 3.5s ease-in-out infinite;
-}
-
-.album-card .sticker-1 {
-    animation-delay: 0s;
-}
-
-.album-card .sticker-2 {
-    animation-delay: 0.4s;
-}
-
-.album-card .sticker-3 {
-    animation-delay: 0.8s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0) rotate(10deg);
-    }
-    50% {
-        transform: translateY(-6px) rotate(10deg);
-    }
-}
-
-/* Tilt */
-.tilt-left {
-    transform: rotate(-2deg);
-}
-
-.tilt-right {
-    transform: rotate(2deg);
-}
-
-/* Popup en álbumes */
-.album-card .polaroid-popup {
-    position: absolute;
-    inset: 10px;
-    background: var(--spotify-dark);
-    color: var(--text-primary);
-    border-radius: 12px;
-    padding: 0.75rem 0.9rem;
-    font-size: 0.85rem;
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(6px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.album-card:hover .polaroid-popup {
-    opacity: 1;
-    transform: translateY(0);
+    margin: 0;
+    line-height: 1.4;
 }
 
 /* ------------------------------------------------------ */
@@ -644,17 +579,25 @@ a:hover {
         margin-bottom: 2rem;
     }
 
-    .hero .albums-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1.5rem;
+    .albums-list {
+        gap: 0.75rem;
     }
 
-    .album-card {
-        max-width: 180px;
+    .album-image-container {
+        width: 60px;
+        height: 60px;
     }
 
     .album-icon {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .album-title {
+        font-size: 1rem;
+    }
+
+    .album-description {
+        font-size: 0.85rem;
     }
 
     .skills-grid {
