@@ -126,6 +126,18 @@ a:hover {
     margin-bottom: 3rem;
 }
 
+.spotify-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.spotify-logo svg {
+    width: 32px;
+    height: 32px;
+    color: var(--spotify-green);
+}
+
 .hero-kicker {
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -316,7 +328,8 @@ a:hover {
     box-shadow: var(--shadow-soft);
     background: var(--spotify-light-gray);
     padding: 0;
-    min-height: 200px;
+    min-height: 300px;
+    max-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -325,9 +338,10 @@ a:hover {
 
 .isac-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    max-height: 400px;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 12px;
 }
 
