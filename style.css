@@ -550,21 +550,21 @@ a:hover {
 
 .course-bubble {
     position: relative;
-    background: var(--spotify-light-gray);
-    color: var(--text-primary);
+    background: var(--spotify-green);
+    color: var(--spotify-darker);
     border-radius: 999px;
     padding: 0.45rem 1.3rem;
     font-size: 0.9rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--spotify-green);
     box-shadow: var(--shadow-soft);
     transition: all 0.2s;
+    font-weight: 500;
 }
 
 .course-bubble:hover {
-    background: var(--spotify-green);
-    color: var(--spotify-darker);
-    border-color: var(--spotify-green);
+    background: var(--spotify-green-hover);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
 }
 
 /* ------------------------------------------------------ */
@@ -590,6 +590,30 @@ a:hover {
 
 .contact-list a:hover {
     color: var(--spotify-green-hover);
+}
+
+.spotify-playlist {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spotify-playlist h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.spotify-playlist > p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.spotify-embed {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* ------------------------------------------------------ */
