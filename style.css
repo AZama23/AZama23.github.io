@@ -186,11 +186,19 @@ a:hover {
     width: 100%;
     height: 100%;
     border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    object-fit: cover;
+}
+
+.album-image-container .album-image {
+    display: block;
+}
+
+.album-image-container .gradient-4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
 }
 
 .album-row:hover .album-image {
